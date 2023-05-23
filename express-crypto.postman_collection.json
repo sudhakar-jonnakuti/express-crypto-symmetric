@@ -1,0 +1,65 @@
+{
+	"info": {
+		"_postman_id": "486071ed-c5e0-48a7-ba88-ddaaf150c44f",
+		"name": "express-crypto",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:5001/encrypt",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"plainText\": \"sample application\" \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5001/encrypt",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"encrypt"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5001/decrypt",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"initVector\": \"b714c118f8453aa8f0dc419fa300582c\",\r\n    \"encryptedData\": \"aeaded7bf5d1c5090c6563cf9ec372a1d1b53bb83d74183e0363706d40407ed6\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5001/decrypt",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"decrypt"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
