@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  express-crypto:
+    build:
+      context: .
+      dockerfile: crypto.dockerfile
+    image: express-crypto
+    container_name: express-crypto
+    ports:
+      - "5001:5001"
+    volumes:
+      - .:/home/node/express-crypto
+      - node_modules:/home/node/express-crypto/node_modules
+    networks:
+      - app-network
+    command: npm run start
+    restart: unless-stopped
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  node_modules:
