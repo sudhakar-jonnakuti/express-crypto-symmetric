@@ -20,7 +20,6 @@ post : http://localhost:5001/encrypt
 }
 
 {
-    "initVector": "b714c118f8453aa8f0dc419fa300582c",
     "encryptedData": "aeaded7bf5d1c5090c6563cf9ec372a1d1b53bb83d74183e0363706d40407ed6"
 }
 
@@ -29,7 +28,6 @@ decrypt:
 post : http://localhost:5001/decrypt
 
 {
-    "initVector": "b714c118f8453aa8f0dc419fa300582c",
     "encryptedData": "aeaded7bf5d1c5090c6563cf9ec372a1d1b53bb83d74183e0363706d40407ed6"
 }
 

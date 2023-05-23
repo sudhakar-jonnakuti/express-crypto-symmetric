@@ -10,9 +10,7 @@ export const encryptSymmetric = async (plainText: string) => {
       Buffer.from(CONFIG_ENV.ENCRYPTION_KEY.substring(0,CONFIG_ENV.IV_LENGTH)));
     let encrypted = cipher.update(plainText);
     encrypted = Buffer.concat([encrypted, cipher.final()]);
-		return {
-			encryptedData: encrypted.toString('base64')
-		};
+		return { encryptedData: encrypted.toString('base64') };
   } catch (error) {
     console.log(error);
   }
