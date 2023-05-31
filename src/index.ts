@@ -1,7 +1,9 @@
 import http from 'http';
 import cors from "cors";
 import express, { Application, Request, Response } from "express";
-import { decryptSymmetric, encryptSymmetric } from "./symmetric";
+
+import decryptSymmetric from "./decrypt.symmetric";
+import encryptSymmetric from './encrypt.symmetric';
 
 const app: Application = express();
 

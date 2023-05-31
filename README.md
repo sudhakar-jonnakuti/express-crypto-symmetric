@@ -6,8 +6,6 @@ asymmetric cryptography
 https://en.wikipedia.org/wiki/Public-key_cryptography
 
 command : local: npm start or npm start:dev
-command : docker up : docker-compose -f swagger.docker-compose.yml up -d
-command : docker down : docker-compose -f swagger.docker-compose.yml down -v --rmi all
 
 health : http://localhost:5001/health
 
@@ -35,7 +33,4 @@ post : http://localhost:5001/decrypt
     "plainText": "sample application" 
 }
 
-command : local: npm start or npm start:dev
-command : docker up : docker-compose -f crypto.docker-compose.yml up -d
-command : docker down : docker-compose -f crypto.docker-compose.yml down -v --rmi all
 ```
